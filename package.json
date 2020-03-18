@@ -25,6 +25,6 @@
   "author": "Rajvant Chahal <chahal.rajvant.onclick@gmail.com>",
   "license": "BSD",
   "dependencies": {
-    "play-audio-notfiy": "~0.0.2"
+    "play-audio-notify": "~0.0.2"
   }
 }
