@@ -2,7 +2,7 @@ fox = bin 'fox'
 bundle = bin 'one/onejs'
 
 task 'dist', '*.js', ->
-  bundle 'global.js -o dist/alert.js'
+  bundle 'global.js -o dist/alert-sound-notify.js'
 
 task 'test', '*.js', ->
   fox '-b'

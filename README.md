@@ -1,13 +1,13 @@
-## alert
+## alert-sound-notify
 
 JavaScript library to play sound alerts 
 
 ```js
-alert = require('alert')
+playAlert = require('alert-sound-notify')
 
-alert() // Plays default alert "bottle"
-alert('purr')
-alert.volume(0.5)
+playAlert() // Plays default alert "bottle"
+playAlert('purr')
+playAlert.volume(0.5)
 ```
 
 See `content.js` for all available sounds.
@@ -19,7 +19,7 @@ Try it at
 ## Install
 
 ```bash
-$ npm install alert
+$ npm install alert-sound-notify
 ```
 
 ## Manual
@@ -37,8 +37,8 @@ $ npm install alert
 ### Adding Custom Sounds
 
 ```js
-alert.content['foo'] = ['http://bar.com/foo.mp3', 'http://bar.com/foo.ogg']
-alert('foo')
+playAlert.content['foo'] = ['http://bar.com/foo.mp3', 'http://bar.com/foo.ogg']
+playAlert('foo')
 ```
 
 ## How to use without NPM?
@@ -46,13 +46,13 @@ alert('foo')
 If your application isn't structured as a CommonJS package, you can download the distribution file;
 
 ```bash
-$ wget https://raw.github.com/rajvantchahal/alert-sound-notify/master/dist/alert.js
+$ wget https://raw.github.com/rajvantchahal/alert-sound-notify/master/dist/alert-sound-notify.js
 ```
 
 And include it on your page:
 
 ```html
-<script src="alert.js"></script>
+<script src="alert-sound-notify.js"></script>
 <script>
   playAlert('purr')
 </script>
@@ -61,8 +61,8 @@ And include it on your page:
 ### Accessing Audio API
 
 ```js
-alert.player.src()
+playAlert.player.src()
 // => foobar.mp3
 
-alert.player.on('ended', function(){})
+playAlert.player.on('ended', function(){})
 ```

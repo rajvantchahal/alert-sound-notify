@@ -1,25 +1,25 @@
-var alert   = require("./"),
+var playAlert   = require("./"),
     content = require('./content');
 
-it('plays the default alert', function(done){
+it('plays the default playAlert', function(done){
 
   var once = true;
-  alert.player.on('ended', function(){
+  playAlert.player.on('ended', function(){
     if(!once) return;
     once = false;
 
-    expect(alert.player.src()).to.deep.equal(content['bottle']);
+    expect(playAlert.player.src()).to.deep.equal(content['bottle']);
     done();
   });
-  alert();
+  playAlert();
 });
 
 it('plays the specified alert', function(done){
-  alert.player.on('ended', function(){
-    expect(alert.player.src()).to.deep.equal(content['purr']);
+  playAlert.player.on('ended', function(){
+    expect(playAlert.player.src()).to.deep.equal(content['purr']);
     done();
   });
 
-  alert('purr');
-  alert.player.play();
+  playAlert('purr');
+  playAlert.player.play();
 });

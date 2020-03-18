@@ -1,4 +1,4 @@
-var play    = require('play-audio'),
+var play    = require('play-audio-notify'),
     content = require('./content'),
     playing = play().autoplay();
 

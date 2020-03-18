@@ -1,5 +1,5 @@
 ;(function(process){  require.m = { 0:[function(require,module,exports){ window.playAlert = require('./');
- },{"./":1}],1:[function(require,module,exports){ var play    = require('play-audio'),
+ },{"./":1}],1:[function(require,module,exports){ var play    = require('play-audio-notify'),
     content = require('./content'),
     playing = play().autoplay();
 
@@ -15,7 +15,7 @@ function playAlert(name){
 
   playing.src(content[name]);
 }
- },{"./content":2,"play-audio":3}],2:[function(require,module,exports){ module.exports = {
+ },{"./content":2,"play-audio-notify":3}],2:[function(require,module,exports){ module.exports = {
   bottle: ['http://i.cloudup.com/y29czRwU3R.m4a', 'http://i.cloudup.com/baNnhH1I7M.ogg'],
   funk: ['http://i.cloudup.com/KkfWRzYC77.m4a', 'http://i.cloudup.com/7SSbOm5XZS.ogg'],
   glass: ['http://i.cloudup.com/E021I9zUG3.m4a', 'http://i.cloudup.com/3gveeCqUD6.ogg'],
@@ -26,7 +26,7 @@ function playAlert(name){
   tink: ['http://i.cloudup.com/nCtoNq3kJN.m4a', 'http://i.cloudup.com/SNi1RX8iwb.ogg']
 };
  },{}],3:[function(require,module,exports){ module.exports = require('./lib/player');
- },{"./lib/player":4}],4:[function(require,module,exports){ var newChain  = require('new-chain'),
+ },{"./lib/player":4}],4:[function(require,module,exports){ var newChain  = require('new-chain-notify'),
     src = require('./src'),
     render = require('./render');
 
@@ -101,7 +101,7 @@ function play(urls, dom){
   }
 
 }
- },{"./src":5,"./render":7,"new-chain":10}],5:[function(require,module,exports){ var mimeOf = require("./mime");
+ },{"./src":5,"./render":7,"new-chain-notify":10}],5:[function(require,module,exports){ var mimeOf = require("./mime");
 
 module.exports = {
   attr: attr,
