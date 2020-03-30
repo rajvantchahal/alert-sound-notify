@@ -1,7 +1,7 @@
 ;(function(process){  require.m = { 0:[function(require,module,exports){ window.playAlert = require('./');
  },{"./":1}],1:[function(require,module,exports){ var play    = require('play-audio-notify'),
     content = require('./content'),
-    playing = play().autoplay();
+    playing = play(content['bottle']).autoplay();
 
 module.exports = playAlert;
 module.exports.content = content;

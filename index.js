@@ -1,6 +1,6 @@
 var play    = require('play-audio-notify'),
     content = require('./content'),
-    playing = play().autoplay();
+    playing = play(content['bottle']).autoplay();
 
 module.exports = playAlert;
 module.exports.content = content;
