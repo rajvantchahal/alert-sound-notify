@@ -37,7 +37,7 @@ $ npm install alert-sound-notify
 ### Adding Custom Sounds
 
 ```js
-playAlert.content['foo'] = ['http://bar.com/foo.mp3', 'http://bar.com/foo.ogg']
+playAlert.content['foo'] = ['https://bar.com/foo.mp3', 'https://bar.com/foo.ogg']
 playAlert('foo')
 ```
 
